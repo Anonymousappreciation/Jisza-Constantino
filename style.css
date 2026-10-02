@@ -1,0 +1,1030 @@
+/* ==========================================
+   GENERAL SETTINGS
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --pink: #dc78a2;
+    --purple: #8966a8;
+    --blue: #a9dce4;
+    --text: #626262;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+        linear-gradient(
+            125deg,
+            #f1c5dc 0%,
+            #c9d1e0 48%,
+            #a7dfe4 100%
+        );
+
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ==========================================
+   FLOATING DECORATIONS
+========================================== */
+
+.floating-decorations {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.floating-decorations span {
+    position: absolute;
+
+    font-size: 27px;
+
+    opacity: 0.35;
+
+    animation:
+        float 7s ease-in-out infinite;
+}
+
+.floating-decorations span:nth-child(1) {
+    top: 15%;
+    left: 8%;
+}
+
+.floating-decorations span:nth-child(2) {
+    top: 35%;
+    left: 88%;
+
+    animation-delay: 1s;
+}
+
+.floating-decorations span:nth-child(3) {
+    top: 68%;
+    left: 76%;
+
+    animation-delay: 2s;
+}
+
+.floating-decorations span:nth-child(4) {
+    top: 76%;
+    left: 12%;
+
+    animation-delay: 3s;
+}
+
+.floating-decorations span:nth-child(5) {
+    top: 48%;
+    left: 5%;
+
+    animation-delay: 1.5s;
+}
+
+.floating-decorations span:nth-child(6) {
+    top: 88%;
+    left: 88%;
+
+    animation-delay: 2.5s;
+}
+
+.floating-decorations span:nth-child(7) {
+    top: 18%;
+    left: 73%;
+
+    animation-delay: 0.5s;
+}
+
+.floating-decorations span:nth-child(8) {
+    top: 55%;
+    left: 95%;
+
+    animation-delay: 3.5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-20px)
+            rotate(12deg);
+    }
+}
+
+
+/* ==========================================
+   PASSWORD SCREEN
+========================================== */
+
+.lock-screen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eec5dc,
+            #c7d6e5,
+            #a9e0e4
+        );
+}
+
+.lock-box {
+    width: 100%;
+
+    max-width: 420px;
+
+    padding: 38px 30px;
+
+    text-align: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.96
+        );
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 18px 50px
+        rgba(
+            80,
+            70,
+            100,
+            0.18
+        );
+}
+
+.lock-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.lock-box h1 {
+    color: var(--purple);
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.lock-box > p {
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+#unlockForm {
+    display: grid;
+
+    gap: 13px;
+}
+
+#password {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border:
+        1px solid
+        #d9c9e5;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+#password:focus {
+    border-color: var(--purple);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            137,
+            102,
+            168,
+            0.13
+        );
+}
+
+#unlockForm button,
+.music-button button {
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            100deg,
+            #d778a3,
+            #8d70b6
+        );
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+#unlockForm button:hover,
+.music-button button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px
+        rgba(
+            137,
+            102,
+            168,
+            0.22
+        );
+}
+
+.error-message {
+    min-height: 22px;
+
+    margin-top: 12px;
+
+    color: #c83e62;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   MAIN PAGE
+========================================== */
+
+#mainContent {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    padding:
+        30px
+        20px
+        20px;
+}
+
+
+/* ==========================================
+   MUSIC BUTTON
+========================================== */
+
+.music-button {
+    position: fixed;
+
+    z-index: 20;
+
+    top: 18px;
+    right: 20px;
+}
+
+.music-button button {
+    padding:
+        11px
+        17px;
+
+    color: #5c5270;
+
+    background: white;
+
+    box-shadow:
+        0 5px 16px
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.page-header {
+    max-width: 900px;
+
+    margin:
+        45px
+        auto
+        50px;
+
+    color: white;
+
+    text-align: center;
+}
+
+.sparkle {
+    margin-bottom: 12px;
+
+    font-size: 37px;
+
+    animation:
+        sparkle 2s
+        ease-in-out
+        infinite;
+}
+
+.page-header h1 {
+    font-size:
+        clamp(
+            28px,
+            4vw,
+            43px
+        );
+
+    line-height: 1.3;
+
+    text-shadow:
+        0 3px 7px
+        rgba(
+            80,
+            70,
+            100,
+            0.2
+        );
+}
+
+.page-header p {
+    margin-top: 12px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+@keyframes sparkle {
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+/* ==========================================
+   EMPLOYEE CARD
+========================================== */
+
+.employee-card {
+    width: 100%;
+
+    max-width: 685px;
+
+    margin:
+        0
+        auto
+        65px;
+
+    padding:
+        45px
+        42px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.96
+        );
+
+    box-shadow:
+        0 18px 45px
+        rgba(
+            75,
+            75,
+            100,
+            0.17
+        );
+}
+
+.photo-frame {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 180px;
+    height: 180px;
+
+    margin:
+        0
+        auto
+        25px;
+
+    padding: 6px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a6e5e9,
+            #d78cbd,
+            #8f80ca
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            120,
+            100,
+            145,
+            0.2
+        );
+}
+
+.photo-frame img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border:
+        5px solid
+        white;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.trophy {
+    margin:
+        8px
+        0
+        14px;
+
+    font-size: 51px;
+}
+
+.section-label {
+    color: var(--purple);
+
+    font-size: 21px;
+
+    font-weight: 800;
+}
+
+.employee-name {
+    margin:
+        8px
+        0;
+
+    color: var(--pink);
+
+    font-size:
+        clamp(
+            25px,
+            4vw,
+            36px
+        );
+
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+}
+
+.award {
+    margin:
+        12px
+        0
+        24px;
+
+    font-weight: 800;
+
+    color: #777;
+
+    letter-spacing: 0.3px;
+}
+
+.message {
+    max-width: 550px;
+
+    margin:
+        0
+        auto
+        25px;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+.qualities {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.qualities span {
+    padding:
+        10px
+        14px;
+
+    border-radius: 30px;
+
+    color: var(--purple);
+
+    background: #f7edf7;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   PHOTO GALLERY
+========================================== */
+
+.photo-section {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin:
+        0
+        auto
+        45px;
+
+    padding:
+        38px
+        25px
+        40px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.93
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            75,
+            75,
+            100,
+            0.12
+        );
+}
+
+.photo-section > h2,
+.thank-you h2,
+.final-message h2 {
+    color: var(--purple);
+
+    font-size:
+        clamp(
+            25px,
+            3vw,
+            32px
+        );
+}
+
+.section-description {
+    margin-top: 10px;
+
+    margin-bottom: 28px;
+
+    line-height: 1.6;
+}
+
+.photo-gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap: 20px;
+}
+
+.photo-card {
+    min-width: 0;
+
+    padding: 13px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: white;
+
+    box-shadow:
+        0 9px 24px
+        rgba(
+            50,
+            50,
+            70,
+            0.13
+        );
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.photo-card:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(
+            50,
+            50,
+            70,
+            0.17
+        );
+}
+
+.photo-card img {
+    display: block;
+
+    width: 100%;
+
+    height: 250px;
+
+    border-radius: 13px;
+
+    object-fit: cover;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e6d5ed,
+            #c4e9ec
+        );
+}
+
+.photo-card h3 {
+    margin:
+        17px
+        0
+        8px;
+
+    color: var(--purple);
+
+    font-size: 20px;
+}
+
+.photo-card p {
+    padding-bottom: 8px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   THANK YOU SECTION
+========================================== */
+
+.thank-you {
+    width: 100%;
+
+    max-width: 750px;
+
+    margin:
+        0
+        auto
+        40px;
+
+    padding:
+        38px
+        35px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.93
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            75,
+            75,
+            100,
+            0.12
+        );
+}
+
+.bouquet {
+    margin-bottom: 10px;
+
+    font-size: 40px;
+}
+
+.thank-you h2 {
+    margin-bottom: 20px;
+}
+
+.thank-you p,
+.final-message p {
+    margin:
+        12px
+        auto;
+
+    max-width: 600px;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+.heart {
+    margin-top: 20px;
+
+    font-size: 34px;
+
+    animation:
+        heartbeat 1.5s
+        infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+
+/* ==========================================
+   FINAL MESSAGE
+========================================== */
+
+.final-message {
+    max-width: 750px;
+
+    margin:
+        0
+        auto
+        30px;
+
+    padding:
+        30px
+        25px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    padding:
+        18px
+        10px
+        12px;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 760px) {
+
+    #mainContent {
+        padding:
+            18px
+            14px;
+    }
+
+    .music-button {
+        top: 12px;
+        right: 12px;
+    }
+
+    .music-button button {
+        padding:
+            10px
+            13px;
+
+        font-size: 12px;
+    }
+
+    .page-header {
+        margin:
+            65px
+            auto
+            35px;
+    }
+
+    .employee-card {
+        padding:
+            32px
+            20px;
+
+        margin-bottom: 35px;
+    }
+
+    .photo-frame {
+        width: 155px;
+        height: 155px;
+    }
+
+    .photo-section {
+        padding:
+            30px
+            16px;
+
+        margin-bottom: 30px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+
+        max-width: 420px;
+
+        margin:
+            0
+            auto;
+
+        gap: 22px;
+    }
+
+    .photo-card img {
+        height: 280px;
+    }
+
+    .thank-you {
+        padding:
+            30px
+            20px;
+    }
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .employee-name {
+        font-size: 24px;
+    }
+
+    .section-label {
+        font-size: 18px;
+    }
+
+    .qualities span {
+        font-size: 12px;
+    }
+
+    .photo-card img {
+        height: 220px;
+    }
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation: none !important;
+
+        transition: none !important;
+    }
+}

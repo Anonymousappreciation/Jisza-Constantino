@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#c9dfe8"
+    >
+
+    <meta
+        name="description"
+        content="Employee Appreciation for Evan John Tarrosa"
+    >
+
+    <title>
+        Employee Appreciation | Jisza Constantino
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         FLOATING DECORATIONS
+    ========================================== -->
+
+    <div
+        class="floating-decorations"
+        aria-hidden="true"
+    >
+        <span>💗</span>
+        <span>✨</span>
+        <span>💙</span>
+        <span>🌸</span>
+        <span>⭐</span>
+        <span>💜</span>
+        <span>🎉</span>
+        <span>💖</span>
+    </div>
+
+
+    <!-- =========================================
+         PASSWORD SCREEN
+    ========================================== -->
+
+    <section
+        id="lockScreen"
+        class="lock-screen"
+    >
+
+        <div class="lock-box">
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+            <h1>
+                Special Surprise
+            </h1>
+
+            <p>
+                This appreciation page is a secret.
+                Enter the password to continue.
+            </p>
+
+            <form id="unlockForm">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    aria-label="Enter password"
+                    autocomplete="off"
+                    required
+                >
+
+                <button
+                    type="submit"
+                >
+                    🔓 Unlock
+                </button>
+
+            </form>
+
+            <p
+                id="errorMessage"
+                class="error-message"
+                role="alert"
+                aria-live="polite"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MAIN PAGE
+    ========================================== -->
+
+    <main
+        id="mainContent"
+        class="hidden"
+    >
+
+        <!-- MUSIC BUTTON -->
+
+        <div class="music-button">
+
+            <button
+                id="musicButton"
+                type="button"
+            >
+                🎵 Play Music
+            </button>
+
+        </div>
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="page-header">
+
+            <div class="sparkle">
+                ✨
+            </div>
+
+            <h1>
+                🌟 Employee of the Month Appreciation 🌟
+            </h1>
+
+            <p>
+                Celebrating dedication, teamwork, and excellence.
+            </p>
+
+        </header>
+
+
+        <!-- =====================================
+             EMPLOYEE APPRECIATION CARD
+        ====================================== -->
+
+        <section class="employee-card">
+
+            <div class="main-photo photo-frame">
+
+                <img
+                    src="employee1.jpeg"
+                    alt="Jisza Constantino"
+                    data-placeholder="Employee Photo"
+                >
+
+            </div>
+
+
+            <div class="trophy">
+                🏆
+            </div>
+
+
+            <p class="section-label">
+                 EMPLOYEE OF THE MONTH
+            </p>
+
+
+            <h2 class="employee-name">
+                JISZA CONSTANTINO
+            </h2>
+
+
+            <p class="award">
+                ✨ EMPLOYEE OF THE EMPLOYEE ✨
+            </p>
+
+
+            <p class="message">
+
+                We would like to express our sincere appreciation
+                for your dedication, hard work, and commitment to
+                your responsibilities. Your consistency, positive
+                attitude, and willingness to give your best each
+                day do not go unnoticed.
+
+                <br>
+                <br>
+
+                Congratulations on this well-deserved recognition! 🎉
+
+                Your dedication, hard work, commitment, and positive attitude continue to make a meaningful difference in our workplace.
+                Your willingness to go the extra mile and consistently give your best is truly appreciated.
+
+                Thank you for being a great example of excellence and professionalism. Your efforts do not go unnoticed,
+                and we are proud to have you as part of our team. 👏✨
+
+                Keep up the outstanding work and continue to inspire those around you!.
+
+                <br>
+                <br>
+
+                Keep up the great work, and thank you for your
+                continued dedication! 👏💙
+
+            </p>
+
+
+            <div class="qualities">
+
+                <span>
+                    ⭐ Dedication
+                </span>
+
+                <span>
+                    💗 Teamwork
+                </span>
+
+                <span>
+                    ✨ Excellence
+                </span>
+
+                <span>
+                    💙 Reliability
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PHOTO GALLERY
+        ====================================== -->
+
+        <section class="photo-section">
+
+            <h2>
+                📸 Special Moments
+            </h2>
+
+            <p class="section-description">
+                Celebrating the person behind the great work.
+            </p>
+
+
+            <div class="photo-gallery">
+
+                <!-- PHOTO 1 -->
+
+                <article class="photo-card">
+
+                    <img
+                        src="photo1.jpeg"
+                        alt="Employee moment celebrating excellence"
+                        data-placeholder="Photo 1"
+                        loading="lazy"
+                    >
+
+                    <h3>
+                        🌟 Excellence
+                    </h3>
+
+                    <p>
+                        Your dedication inspires the team.
+                    </p>
+
+                </article>
+
+
+                <!-- PHOTO 2 -->
+
+                <article class="photo-card">
+
+                    <img
+                        src="photo2.jpeg"
+                        alt="Employee moment celebrating teamwork"
+                        data-placeholder="Photo 2"
+                        loading="lazy"
+                    >
+
+                    <h3>
+                        💗 Teamwork
+                    </h3>
+
+                    <p>
+                        Together, we achieve great things.
+                    </p>
+
+                </article>
+
+
+                <!-- PHOTO 3 -->
+
+                <article class="photo-card">
+
+                    <img
+                        src="photo3.jpeg"
+                        alt="Employee appreciation moment"
+                        data-placeholder="Photo 3"
+                        loading="lazy"
+                    >
+
+                    <h3>
+                        ✨ Appreciation
+                    </h3>
+
+                    <p>
+                        Your contribution truly matters.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             THANK YOU MESSAGE
+        ====================================== -->
+
+        <section class="thank-you">
+
+            <div class="bouquet">
+                💐
+            </div>
+
+            <h2>
+                Thank You!
+            </h2>
+
+
+            <p>
+                Thank you for always giving your best and for being
+                a reliable and valuable part of our organization.
+                Your hard work does not go unnoticed.
+            </p>
+
+
+            <p>
+                From Management, we sincerely thank you for your
+                continued dedication and commitment. We are proud
+                to have you as part of the team! 💙
+            </p>
+
+
+            <p>
+                Keep up the great work, keep striving for excellence,
+                and continue inspiring those around you! 🌟🚀
+            </p>
+
+
+            <div class="heart">
+                💖
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FINAL MESSAGE
+        ====================================== -->
+
+        <section class="final-message">
+
+            <h2>
+                You Are Appreciated! 🌸
+            </h2>
+
+            <p>
+                Great employees make great teams.
+                Thank you for being an important part of ours.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
+        <footer>
+
+            <p>
+                Made with ❤️ by Carecor Solutions Inc.
+            </p>
+
+            <p>
+                Celebrating people. Appreciating excellence.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================
+         BACKGROUND MUSIC
+    ========================================== -->
+
+    <audio
+        id="backgroundMusic"
+        loop
+        preload="none"
+    >
+
+        <source
+            src="music.mp3"
+            type="audio/mpeg"
+        >
+
+        Your browser does not support audio.
+
+    </audio>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
